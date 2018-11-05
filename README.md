@@ -1,3 +1,18 @@
+## RV React Challenge
+
+This project was built for a job challenge, using:
+
+- React
+- Redux
+- Redux-Thunk
+- React-Router
+- Fetch data from a external API
+- Material-UI
+
+The project build is available [here on Surge.sh](https://rvchallenge.surge.sh)
+
+## Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
