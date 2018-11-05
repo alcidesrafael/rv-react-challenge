@@ -9,6 +9,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import PostInfo from './PostInfo'
 import { SearchContext } from '../components/Dashboard'
+import emptyImage from '../resources/images/empty.svg'
 
 const styles = theme => ({
   container: {
@@ -51,6 +52,21 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+  },
+  empty: {
+    padding: theme.spacing.unit * 3,
+    fontSize: '1rem',
+    fontStyle: 'italic',
+    color: '#cecece',
+    textAlign: 'center',
+  },
+  imageWrapper: {
+    textAlign: 'center',
+    margin: '30px auto 60px auto',
+  },
+  image: {
+    width: '50%',
+    margin: '0 auto',
   },
 })
 
@@ -102,9 +118,14 @@ class Posts extends React.Component {
                       </ListItemLink>
                     ))
                   ) : (
-                    <Typography className={classes.loading}>
-                      Nenhum resultado encontrado.
-                    </Typography>
+                    <div>
+                      <Typography className={classes.empty}>
+                        Nenhum resultado encontrado.
+                      </Typography>
+                      <div className={classes.imageWrapper}>
+                        <img src={emptyImage} alt="Empty" className={classes.image} />
+                      </div>
+                    </div>
                   )}
                 </List>
               )}
